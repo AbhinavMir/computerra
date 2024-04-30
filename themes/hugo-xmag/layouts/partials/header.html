@@ -11,9 +11,12 @@
   </head>
 
   <body{{if .IsPage}} class="page"{{ end }}>
+    
     <nav class="header">
-      {{ partial "banner.html" . }}
-      <div class="head-meta">
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="https://raw.githubusercontent.com/AbhinavMir/computerra/main/static/logo.png" style="display: inline-block;" width="20%"/>
+      </div>
+    
       {{ if .IsPage }}
         <span><a href="{{ relURL .Site.BaseURL }}">{{ (default "Back to Home" .Site.Params.text.back) | safeHTML }}</a></span>
         {{ if .Params.date }}<span class="date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
